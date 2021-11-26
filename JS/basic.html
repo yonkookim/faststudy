@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>안녕하세요.</h1>
+위의 이 제목을 자바스크립트를 사용해 바꿉니다.<br>
+아래 버튼을 눌러주세요.<br><br>
+<button onclick="changeSalutation()">인사말 바꾸기</button>
+
+    <h2>반갑습니다.</h2>
+    1초마다 인삿말이 바뀔 것입니다.
+<script>
+    function changeSalutation(){
+        let salutation = prompt("원하는 인삿말을 입력하세요.");
+        document.querySelector("h1").innerText=salutation;
+    }
+    //-------------------------------------------------
+    let arrSalu=["안녕하세요", "반갑습니다."];
+    let i = 0;
+    setInterval(function(){
+        i=1-i;
+        document.querySelector("h2").innerText= arrSalu[i];
+    }, 1000); //1초마다 반복하여 실행되는 함수
+</script>
+</body>
+</html>
