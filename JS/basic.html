@@ -28,9 +28,13 @@
     }, 1000); //1초마다 반복하여 실행되는 함수
 
     console.log(0==false) //true
+    console.log(0===false) //false
     console.log(0=="") //true
+    console.log(0==="") //false
     console.log(false=="") //true
+    console.log(false==="") //false
     console.log(1=="1") //true
+    console.log(1==="1") //false
     //이런 부분들 때문에 엄격한 등호 ===가 아닌 ==를 사용하면 오류가 생길 수 o
     console.log(true>false)//true
     console.log(true>false? "true": "false")//true with 삼항연산자

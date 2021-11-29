@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+<script>
+    let array1=[1,2,3]
+    let array2=[1,2,3]
+    console.group("boolean")
+    console.log(array1==array2) //배열들은 서로 같을 수 X (참조 ref가 다름)
+    console.log(array1[0]===array2[0]) //배열값 끼리는 같을 수 o
+    console.groupEnd()
+
+    let arr1= ["A", "B", "C"]
+    console.group("indexOf")
+    console.log(arr1.indexOf("B"))
+    console.log(arr1.indexOf("E")) //없는 값의 인덱스는 -1
+    console.groupEnd()
+
+    
+
+    let arr2= [1, 2, 3]
+    let arr3= [5, 6, 7]
+    arr2.concat(arr3)
+    console.log(arr2) //본래 arr2는 바뀌지 X
+    console.log(arr2.concat(arr3)) //연결된 새로운 배열을 그저 반환
+    arr2.push(4)
+    arr2.shift(0)
+    console.log(arr2) //push는 기존의 배열에 값을 추가하는 차이점이 존재
+    
+</script>
+</body>
+</html>
